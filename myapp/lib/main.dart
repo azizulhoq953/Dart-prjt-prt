@@ -1,4 +1,6 @@
 
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp
   (
     debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Apps',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -88,16 +90,144 @@ class _MyHomePageState extends State<MyHomePage> {
   ],
   ),
   ),
-//===header section End
+                     //===header section End
+SizedBox(
+  height:10,
+
+),
+
 Align(
   alignment: Alignment.topLeft,
-  child: Text("Hello Azizul",style: TextStyle(fontSize:30,fontWeight: FontWeight.bold,color:Colors.white, ),)),
-        
-        ],),
+  child: Text("Hello Azizul",style: TextStyle(fontSize:30,fontWeight: FontWeight.bold,color:Colors.pink, ),)),
+        SizedBox(
+  height:5,
+
+),
+        Align(
+  alignment: Alignment.topLeft,
+  child: Text("Hello Bangladesh",style: TextStyle(fontSize:20,fontWeight: FontWeight.bold,color:Colors.yellowAccent, ),)),
+         SizedBox(
+  height:5,
+
+),
+
+Card(
+  elevation: 15,
+  color:Colors.deepPurple[200],
+  child:Container(
+    width:_width,
+    padding: EdgeInsets.all(10),
+    child:Column(
+      crossAxisAlignment: CrossAxisAlignment.start, 
+      children: [
+        Text("Mobile App design",
+        style:TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+        ) 
+        ),
+        SizedBox(
+  height:5,
+
+),
+ Text("I am Form Barishal",
+        style:TextStyle(
+          color: Colors.yellow,
+          fontSize: 15,
+        ) 
+        ),
+        Container( 
+  child: Row(mainAxisAlignment:MainAxisAlignment.spaceBetween,
+  children: [   Container(
+    child: Row(
+        children: [
+          CircleAvatar(radius: 26,
+          backgroundImage: AssetImage("assets/my.png"),
+          ),
+          CircleAvatar(radius: 26,
+          backgroundImage: AssetImage("assets/my.png"),
+          ),
+        ],
+      ),
+  ),
+    Icon(Icons.beach_access,color: Colors.purple, size:23),
+ 
+
+  ],
+  ),
+  ),
+      ]
+      
+    )
+  )
+  
+),
+
+
+Container( 
+  child: Row(mainAxisAlignment:MainAxisAlignment.spaceBetween,
+  children: [
+    Text("Monthly Reviews",
+    style: TextStyle(color:Colors.white,
+    fontWeight:FontWeight.bold,
+    fontSize: 20 ),
+    ),
+   Icon(
+     Icons.reviews,
+     color:Colors.white,
+   )
+  ],
+  ),
+  ),
+  SizedBox(
+  height:5,
+
+
+
+),
+Card( 
+  elevation: 16,
+  color: Colors.deepPurple[300],
+  child: Container( 
+    width:_width/3,
+    height:_height/3,
+    child: Column( 
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [ 
+        Text("30 Score",
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 16
+        ),)
+      ],
+    ),
+  ),
+)
+
+],),
         
       ),
       );
       
+      
   }
   
+  
 }
+
+
+
+ /*Card(  
+    child: Column(  
+      mainAxisSize: MainAxisSize.min,  
+      children: <Widget>[  
+        const ListTile(  
+          leading: Icon(Icons.album, size: 45),  
+          title: Text('Hi Azizul '),  
+          subtitle: Text('Best of Azizul Hoque'),  
+        ),  
+      ],  
+    ),  
+  ), */
+   
+        
