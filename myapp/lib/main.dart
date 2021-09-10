@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
     CircleAvatar(radius: 26,
     backgroundImage: AssetImage("assets/name.jpg"),
     ),
-   
+
   ],
   ),
   ),
@@ -181,10 +181,8 @@ Container(
   ),
   SizedBox(
   height:5,
-
-
-
 ),
+
 Card( 
   elevation: 16,
   color: Colors.deepPurple[300],
@@ -202,11 +200,33 @@ Card(
       ],
     ),
   ),
-)
+),
+SizedBox(
+  height:5,
 
+),
+Container(
+  
+      padding: const EdgeInsets.all(8),
+      child: const Text('Most Important Thinks'),
+      color: Colors.teal[300],
+    ),
+    SizedBox(
+  height:5,
+
+),
+
+Container(  
+                padding: const EdgeInsets.all(10),  
+                child: const Text('OnClick', style: TextStyle(fontSize: 20)),  
+                color: Colors.blue,  
+              ),  
+    
+    
 ],),
         
       ),
+      
       );
       
       
