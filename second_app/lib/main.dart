@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, avoid_unnecessary_containers
+// ignore_for_file: use_key_in_widget_constructors, avoid_unnecessary_containers, deprecated_member_use
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,14 +18,31 @@ class MyApp2 extends StatefulWidget {
 }
 
 class _MyApp2State extends State<MyApp2> {
+  String txt = "";
+  @override
+  void initState() {
+    txt = "Hello I am Statefull Widget";
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: const Center(
-          child: Text(
-        'Hello I am Statefull Widget',
-        style: TextStyle(fontWeight: FontWeight.bold),
-      )),
+      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Center(child: Text(txt)),
+        RaisedButton(
+          onPressed: () {
+            // ignore: avoid_print
+
+            setState(() {
+              txt = "I am Change Your Button Click";
+            });
+            // ignore: avoid_print
+            print("onPressed $txt");
+          },
+          child: const Text("chaing"),
+        )
+      ]),
     );
   }
 }
