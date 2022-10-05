@@ -57,32 +57,42 @@ class MyApp extends StatelessWidget{
     debugShowCheckedModeBanner: false,
     home: SafeArea(child: Scaffold(appBar: AppBar(title: Center(child: Text("Row")),
     ),
-    body: Row(children: <Widget> [
-      Container(
-        height: 200,
-        width: 150,
-        color: Colors.blueGrey,
-      ),
-      SizedBox(width: 10,),
+    body: ListView(
+      children: [
+        Column(children: <Widget> [
         Container(
-        height: 200,
-        width: 150,
-        color: Colors.amber,
-      ),
-      SizedBox(width: 10,),
-        Container(
-        height: 200,
-        width: 150,
-        color: Colors.black12,
-      ),
-      SizedBox(width: 10,),
-        Container(
-        height: 200,
-        width: 150,
-        color: Colors.black26,
-      )
-
-    ]),
+          height: 200,
+          width: 150,
+          color: Colors.blueGrey,
+        ),
+        SizedBox(height: 10,),
+          Container(
+          height: 200,
+          width: 150,
+          color: Colors.amber,
+        ),
+        SizedBox(height: 10,),
+          Container(
+          height: 200,
+          width: 150,
+          color: Colors.black12,
+        ),
+        SizedBox(height: 10,),
+          Container(
+          height: 200,
+          width: 150,
+          color: Colors.black26,
+        ),
+         SizedBox(height: 10,),
+          Container(
+          height: 200,
+          width: 150,
+          color: Colors.black26,
+        )
+      
+      ]),
+      ], 
+    ),
     )
     ),
   );
