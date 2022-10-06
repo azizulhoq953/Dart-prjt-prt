@@ -55,32 +55,47 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
   return MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: SafeArea(child: Scaffold(appBar: AppBar(title: Center(child: Text("Row")),
+    home:Homepage()
+  );
+  
+  }
+}
+
+
+class Homepage extends StatelessWidget{
+  @override 
+  Widget build(BuildContext context) {
+      var screenheight = MediaQuery.of(context).size.height;
+    var Containerheight = screenheight /5;
+    var screenwidth =MediaQuery.of(context).size.width;
+    var containerwidth =screenwidth /4;
+    return SafeArea(child: Scaffold(appBar: AppBar(title: Center(child: Text("Row")),
     ),
     body: ListView(
       children: [
         Column(children: <Widget> [
         Container(
-          height: 200,
-          width: 150,
+          height: Containerheight,
+          // height: MediaQuery.of(context).size.height/5,
+          width:containerwidth,
           color: Colors.blueGrey,
         ),
         SizedBox(height: 10,),
           Container(
-          height: 200,
-          width: 150,
+          height: MediaQuery.of(context).size.height/5,
+          width: MediaQuery.of(context).size.width/4,
           color: Colors.amber,
         ),
         SizedBox(height: 10,),
           Container(
-          height: 200,
-          width: 150,
+          height: MediaQuery.of(context).size.height/5,
+          width: MediaQuery.of(context).size.width/4,
           color: Colors.black12,
         ),
         SizedBox(height: 10,),
           Container(
-          height: 200,
-          width: 150,
+          height: MediaQuery.of(context).size.height/5,
+          width: MediaQuery.of(context).size.width/4,
           color: Colors.black26,
         ),
          SizedBox(height: 10,),
@@ -94,8 +109,6 @@ class MyApp extends StatelessWidget{
       ], 
     ),
     )
-    ),
-  );
-  
+    );
   }
 }
