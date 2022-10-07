@@ -4,6 +4,99 @@ import 'package:flutter/material.dart';
 
 void main()=> runApp(MyApp());
 
+
+
+class MyApp extends StatelessWidget{
+  @override 
+  Widget build(BuildContext context) {
+  return MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home:Homepage()
+  );
+  
+  }
+}
+
+
+class Homepage extends StatelessWidget{
+@override
+Widget build(BuildContext context){
+  return MaterialApp( 
+home: SafeArea(
+  child:   Scaffold( 
+    floatingActionButton: FloatingActionButton(onPressed: (){},
+    
+    child: Icon(Icons.add),),
+  
+    body: Center(
+  
+      child: Stack(alignment: Alignment.bottomCenter,
+  
+      clipBehavior: Clip.none,
+  
+     //overflow: Overflow.visible,
+  
+     children: <Widget>[
+  
+      Container(
+  
+        height: MediaQuery.of(context).size.height/5,
+  
+        width: MediaQuery.of(context).size.width/5,
+  
+        color: Colors.amberAccent,
+  
+      ),
+  
+      Positioned(bottom: -40,
+  
+      child: CircleAvatar( 
+  
+        radius: 30,
+  
+      ),)
+  
+     ],
+  
+      ),
+  
+    ),
+  
+  ),
+),
+  );
+}
+
+}
+
+// class MyApp extends StatelessWidget{
+//   @override 
+//   Widget build(BuildContext context){
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: SafeArea(
+     
+//         child: Scaffold(  
+//  appBar: AppBar(title: Center(child: Text("Home Page ")),),
+//           body: ListView( 
+//             children: <Widget>[
+//               ListTile( 
+//                 title: Text("I'm Learning This"),
+//                 subtitle: Text("Applications Create"),
+//                 leading: CircleAvatar(child: Icon(Icons.message),),
+//                 trailing: Icon(Icons.add_a_photo),
+//               )
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+
+
+
 // class MyApp extends StatelessWidget{
 //   @override 
 //   Widget build(BuildContext context){
@@ -25,90 +118,73 @@ void main()=> runApp(MyApp());
 
 
 
+
+
 // class MyApp extends StatelessWidget{
 //   @override 
-//   Widget build(BuildContext context){
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home:SafeArea(
-//         child: Scaffold(
-           
-//           body: Center(
-//             child: Container( 
-//              // child: Image.asset("asset/name.jpg"),
-//               height: 200,
-//               width: 300,
-//               decoration: BoxDecoration(color:Colors.yellowAccent),
-//               child:Center(child: Text("I Love Coding I'm New This FrameWork Flutter",style: TextStyle(fontSize: 25, ), 
-//                )),
-                
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
+//   Widget build(BuildContext context) {
+//   return MaterialApp(
+//     debugShowCheckedModeBanner: false,
+//     home:Homepage()
+//   );
+  
 //   }
 // }
 
-class MyApp extends StatelessWidget{
-  @override 
-  Widget build(BuildContext context) {
-  return MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home:Homepage()
-  );
-  
-  }
-}
 
-
-class Homepage extends StatelessWidget{
-  @override 
-  Widget build(BuildContext context) {
-      var screenheight = MediaQuery.of(context).size.height;
-    var Containerheight = screenheight /5;
-    var screenwidth =MediaQuery.of(context).size.width;
-    var containerwidth =screenwidth /4;
-    return SafeArea(child: Scaffold(appBar: AppBar(title: Center(child: Text("Row")),
-    ),
-    body: ListView(
-      children: [
-        Column(children: <Widget> [
-        Container(
-          height: Containerheight,
-          // height: MediaQuery.of(context).size.height/5,
-          width:containerwidth,
-          color: Colors.blueGrey,
-        ),
-        SizedBox(height: 10,),
-          Container(
-          height: MediaQuery.of(context).size.height/5,
-          width: MediaQuery.of(context).size.width/4,
-          color: Colors.amber,
-        ),
-        SizedBox(height: 10,),
-          Container(
-          height: MediaQuery.of(context).size.height/5,
-          width: MediaQuery.of(context).size.width/4,
-          color: Colors.black12,
-        ),
-        SizedBox(height: 10,),
-          Container(
-          height: MediaQuery.of(context).size.height/5,
-          width: MediaQuery.of(context).size.width/4,
-          color: Colors.black26,
-        ),
-         SizedBox(height: 10,),
-          Container(
-          height: 200,
-          width: 150,
-          color: Colors.black26,
-        )
+// class Homepage extends StatelessWidget{
+//   @override 
+//   Widget build(BuildContext context) {
+//       var screenheight = MediaQuery.of(context).size.height;
+//     var Containerheight = screenheight /5;
+//     var screenwidth =MediaQuery.of(context).size.width;
+//     var containerwidth =screenwidth /4;
+//     return SafeArea(child: Scaffold(appBar: AppBar(title: Center(child: Text("Home Page")),
+//     ),
+//     body: ListView(
+//       children: [
+//         Column(children: <Widget> [
+//           ListTile( 
+//             title: Text("My Pasion"),
+//             subtitle: Text("Is A coding Any Programming Language"),
+//             leading: CircleAvatar(child: Icon(Icons.message)),
+//             trailing: Icon(Icons.add_a_photo),
+//           )
+        // Container(
+        //   height: Containerheight,
+        //   // height: MediaQuery.of(context).size.height/5,
+        //   width:containerwidth,
+        //   color: Colors.blueGrey,
+        // ),
+        // SizedBox(height: 10,),
+        //   Container(
+        //   height: MediaQuery.of(context).size.height/5,
+        //   width: MediaQuery.of(context).size.width/4,
+        //   color: Colors.amber,
+        // ),
+        // SizedBox(height: 10,),
+        //   Container(
+        //   height: MediaQuery.of(context).size.height/5,
+        //   width: MediaQuery.of(context).size.width/4,
+        //   color: Colors.black12,
+        // ),
+        // SizedBox(height: 10,),
+        //   Container(
+        //   height: MediaQuery.of(context).size.height/5,
+        //   width: MediaQuery.of(context).size.width/4,
+        //   color: Colors.black26,
+        // ),
+        //  SizedBox(height: 10,),
+        //   Container(
+        //   height: 200,
+        //   width: 150,
+        //   color: Colors.black26,
+        // )
       
-      ]),
-      ], 
-    ),
-    )
-    );
-  }
-}
+//       ]),
+//       ], 
+//     ),
+//     )
+//     );
+//   }
+// }
