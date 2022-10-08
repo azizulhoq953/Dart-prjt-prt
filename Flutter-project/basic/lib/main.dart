@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -31,15 +32,17 @@ home: SafeArea(
     body: Center(
   
       child: Stack(alignment: Alignment.bottomCenter,
-  
+      
       clipBehavior: Clip.none,
   
      //overflow: Overflow.visible,
   
      children: <Widget>[
-  
+       
       Container(
-  
+    child:
+    //Image.asset("images/great.png"),
+    Image.network("https://image.shutterstock.com/image-photo/global-digital-connections-technology-600w-1892908552.jpg",alignment: Alignment.topLeft,),
         height: MediaQuery.of(context).size.height/5,
   
         width: MediaQuery.of(context).size.width/5,
