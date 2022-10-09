@@ -2,75 +2,147 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+// import 'package:liquid_swipe/liquid_swipe.dart';
 
 void main()=> runApp(MyApp());
 
-
-
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override 
-  Widget build(BuildContext context) {
-  return MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home:Homepage()
-  );
-  
+  Widget build(BuildContext context){
+    
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
+      home: Scaffold( 
+
+
+        body: GridView.count(crossAxisCount: 2,
+             mainAxisSpacing: 10,
+             crossAxisSpacing: 10,
+
+        children: <Widget>[
+          Container( 
+            height: 200,
+            width: 150,
+            color: Colors.amber,
+          ),
+            Container( 
+            height: 200,
+            width: 150,
+            color: Color.fromARGB(255, 7, 255, 255),
+          ),
+            Container( 
+            height: 200,
+            width: 150,
+            color: Color.fromARGB(255, 8, 255, 107),
+          ),
+            Container( 
+            height: 200,
+            width: 150,
+            color: Color.fromARGB(255, 249, 36, 210),
+          ),
+        ],
+        ),
+        // body: Center( 
+        //   child: Card( 
+        //     elevation: 10,
+        //     shape: RoundedRectangleBorder(
+        //       borderRadius: BorderRadius.all( Radius.circular(20))
+        //     ),
+        //     child: Container(  
+        //       height: 200,
+        //       width: 150,
+        //     ),
+        //   ),
+        // ),
+      ),
+
+    );
   }
 }
+// isn't work this code
+// class MyApp extends StatelessWidget {
+//   @override 
+//   Widget build(BuildContext context){
+//     final pages =[
+//       Container( color: Colors.green,),
+//        Container( color: Colors.pinkAccent,),
+//         Container( color: Colors.red,),
+//          Container( color: Colors.yellow,),
+//           Container( color: Colors.deepOrange,),
+//     ];
+//     return MaterialApp( 
+//       home: Scaffold( 
+//         body: liquidSwipe(pages: pages),
+//       ),
+//     );
+//   }
+// }
+
+// class MyApp extends StatelessWidget{
+//   @override 
+//   Widget build(BuildContext context) {
+//   return MaterialApp(
+//     debugShowCheckedModeBanner: false,
+//     home:Homepage()
+//   );
+  
+//   }
+// }
 
 
-class Homepage extends StatelessWidget{
-@override
-Widget build(BuildContext context){
-  return MaterialApp( 
-home: SafeArea(
-  child:   Scaffold( 
-    floatingActionButton: FloatingActionButton(onPressed: (){},
+// class Homepage extends StatelessWidget{
+// @override
+// Widget build(BuildContext context){
+//   return MaterialApp( 
+// home: SafeArea(
+//   child:   Scaffold( 
+//     floatingActionButton: FloatingActionButton(onPressed: (){},
     
-    child: Icon(Icons.add),),
+//     child: Icon(Icons.add),),
   
-    body: Center(
+//     body: Center(
   
-      child: Stack(alignment: Alignment.bottomCenter,
+//       child: Stack(alignment: Alignment.bottomCenter,
       
-      clipBehavior: Clip.none,
+//       clipBehavior: Clip.none,
   
-     //overflow: Overflow.visible,
+//      //overflow: Overflow.visible,
   
-     children: <Widget>[
+//      children: <Widget>[
        
-      Container(
-    child:
-    //Image.asset("images/great.png"),
-    Image.network("https://image.shutterstock.com/image-photo/global-digital-connections-technology-600w-1892908552.jpg",alignment: Alignment.topLeft,),
-        height: MediaQuery.of(context).size.height/5,
+//       Container(
+//     child:
+//     //Image.asset("images/great.png"),
+//     Image.network("https://image.shutterstock.com/image-photo/global-digital-connections-technology-600w-1892908552.jpg",alignment: Alignment.topLeft,),
+//         height: MediaQuery.of(context).size.height/5,
   
-        width: MediaQuery.of(context).size.width/5,
+//         width: MediaQuery.of(context).size.width/5,
   
-        color: Colors.amberAccent,
+//         color: Colors.amberAccent,
   
-      ),
+//       ),
   
-      Positioned(bottom: -40,
+//       Positioned(bottom: -40,
   
-      child: CircleAvatar( 
+//       child: CircleAvatar( 
   
-        radius: 30,
+//         radius: 30,
   
-      ),)
+//       ),)
   
-     ],
+//      ],
   
-      ),
+//       ),
   
-    ),
+//     ),
   
-  ),
-),
-  );
-}
+//   ),
+// ),
+//   );
+// }
 
-}
+// }
 
 // class MyApp extends StatelessWidget{
 //   @override 
