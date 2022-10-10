@@ -16,32 +16,36 @@ class MyApp extends StatelessWidget {
       home: Scaffold( 
 
 
-        body: GridView.count(crossAxisCount: 2,
-             mainAxisSpacing: 10,
-             crossAxisSpacing: 10,
+        body: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: GridView.count(crossAxisCount: 2,
+               mainAxisSpacing: 10,
+               crossAxisSpacing: 10,
+            //   crossAxisCount:2,
 
-        children: <Widget>[
-          Container( 
-            height: 200,
-            width: 150,
-            color: Colors.amber,
-          ),
+          children: <Widget>[
             Container( 
-            height: 200,
-            width: 150,
-            color: Color.fromARGB(255, 7, 255, 255),
+              height: 200,
+              width: 150,
+              color: Colors.amber,
+            ),
+              Container( 
+              height: 200,
+              width: 150,
+              color: Color.fromARGB(255, 7, 255, 255),
+            ),
+              Container( 
+              height: 200,
+              width: 150,
+              color: Color.fromARGB(255, 8, 255, 107),
+            ),
+              Container( 
+              height: 200,
+              width: 150,
+              color: Color.fromARGB(255, 249, 36, 210),
+            ),
+          ],
           ),
-            Container( 
-            height: 200,
-            width: 150,
-            color: Color.fromARGB(255, 8, 255, 107),
-          ),
-            Container( 
-            height: 200,
-            width: 150,
-            color: Color.fromARGB(255, 249, 36, 210),
-          ),
-        ],
         ),
         // body: Center( 
         //   child: Card( 
