@@ -1,52 +1,86 @@
 import 'dart:async';
 import 'dart:ui';
-
+import 'package:basic/page1.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:liquid_swipe/liquid_swipe.dart';
 
 void main()=> runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget{
+
+@override 
+
+_MyAppState CreateState() _MyAppState();
+ 
+}
+
+class _MyAppState extends State<MyApp>{
+  PageController _controller= PageController(
+    initialPage: 0,
+  );
   @override 
   Widget build(BuildContext context){
+    return MaterialApp( 
+home: Scaffold(  
+  body: PageView(
+    controller: _controller,
+    children: <Widget>[
+      page1(),
+      Page2(),
+      Page3(),
+    ],
+  ),
+),
+
+    );
+  }
+}
+
+
+
+
+// class MyApp extends StatelessWidget {
+//   @override 
+//   Widget build(BuildContext context){
     
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
 
-      home: Scaffold( 
+//       home: Scaffold( 
 
 
-        body: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: GridView.count(crossAxisCount: 2,
-               mainAxisSpacing: 10,
-               crossAxisSpacing: 10,
-            //   crossAxisCount:2,
+//         body: Padding(
+//           padding: const EdgeInsets.all(10.0),
+//           child: GridView.count(crossAxisCount: 2,
+//                mainAxisSpacing: 10,
+//                crossAxisSpacing: 10,
+//             //   crossAxisCount:2,
 
-          children: <Widget>[
-            Container( 
-              height: 200,
-              width: 150,
-              color: Colors.amber,
-            ),
-              Container( 
-              height: 200,
-              width: 150,
-              color: Color.fromARGB(255, 7, 255, 255),
-            ),
-              Container( 
-              height: 200,
-              width: 150,
-              color: Color.fromARGB(255, 8, 255, 107),
-            ),
-              Container( 
-              height: 200,
-              width: 150,
-              color: Color.fromARGB(255, 249, 36, 210),
-            ),
-          ],
-          ),
-        ),
+//           children: <Widget>[
+//             Container( 
+//               height: 200,
+//               width: 150,
+//               color: Colors.amber,
+//             ),
+//               Container( 
+//               height: 200,
+//               width: 150,
+//               color: Color.fromARGB(255, 7, 255, 255),
+//             ),
+//               Container( 
+//               height: 200,
+//               width: 150,
+//               color: Color.fromARGB(255, 8, 255, 107),
+//             ),
+//               Container( 
+//               height: 200,
+//               width: 150,
+//               color: Color.fromARGB(255, 249, 36, 210),
+//             ),
+//           ],
+//           ),
+//         ),
         // body: Center( 
         //   child: Card( 
         //     elevation: 10,
